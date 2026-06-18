@@ -32,3 +32,13 @@
   connection: localhost
   roles:
     - demo
+
+
+# from command line also we can send variable to playbook by using -e option
+
+
+# If the same variable name comes in different locations then precedence will come
+# 1. CLI Variable
+# 2. Task Variable
+# 3. Role Variable
+# 4. Play Variable
