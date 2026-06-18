@@ -3,5 +3,5 @@
     msg: "Hello World"
 
 - name: Print URL
-  ansible.builtin.ddebug:
+  ansible.builtin.debug:
     msg: URL - {{ URL }}
