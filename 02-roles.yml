@@ -1,5 +1,5 @@
 - name: Sample
-  hosts: all
-  connection: all
+  hosts: localhost
+  connection: localhost
   roles:
     - demo
