@@ -37,8 +37,46 @@
 # from command line also we can send variable to playbook by using -e option
 
 
+
 # If the same variable name comes in different locations then precedence will come
 # 1. CLI Variable
 # 2. Task Variable
 # 3. Role Variable
 # 4. Play Variable
+
+
+# Variables are now 3 types
+
+# 1. Normal
+# vars:
+#    URL: example.com
+
+# 2. List
+# vars:
+# URLS:
+#   - app1.example.com
+#   - app2.example.com
+
+
+# 3. Map
+# vars
+#  URLS:
+#    app1: app1.example.com
+#    app2: app2.example.com
+
+
+# Variable also have data types
+# 1. String
+# 2. Number
+# 3. Boolean (  True/False, Yes/No )
+
+## Upto now we have seen the user defined variables, where as ansible determines the system config and make those variables available for you to use
+# Those are called as facts
+
+- name: Print a fact
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print a fact
+      ansible.builtin.debug:
+        msg: "{{ ansible_distribution }}"
