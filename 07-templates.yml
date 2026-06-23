@@ -3,6 +3,6 @@
   connection: local
   tasks:
     - name: file copy
-      ansible.builtin.copy:
+      ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
